@@ -1,0 +1,61 @@
+index.html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delivery Charge Payment</title>
+<style>
+body {
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 25px;
+  text-align: center;
+}
+.card {
+  max-width: 400px;
+  margin: 60px auto;
+  background: #303033;
+  padding: 25px;
+  border-radius: 22px;
+}
+h2 { color: #ff4593; }
+.number { font-size: 24px; }
+button {
+  width: 100%;
+  padding: 17px;
+  border: 0;
+  border-radius: 12px;
+  background: #e2136e;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>Delivery Charge Payment</h2>
+  <h1>bKash</h1>
+  <p class="number">01707579207</p>
+  <button onclick="copyNumber()">
+    Copy account number
+  </button>
+  <p>Send Money করার পর Transaction ID
+  আমাদের Facebook Inbox-এ পাঠান।</p>
+</div>
+<script>
+async function copyNumber() {
+  try {
+    await navigator.clipboard.writeText(
+      "01707579207"
+    );
+    alert("Number copied!");
+  } catch (err) {
+    alert("Please copy the number manually.");
+  }
+}
+</script>
+</body>
+</html>
